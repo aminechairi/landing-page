@@ -6,6 +6,36 @@ let nav_display = {
 nav_display.btn_muni.addEventListener("click", () => {
   nav_display.muni.classList.toggle("display");
 })
+let = mobility = {
+  btns: [
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[0],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[1],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[2],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[3],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[4],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[5],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[6], 
+  ],
+  componants: [
+    document.getElementById(`home`),
+    document.getElementById(`about`),
+    document.getElementById(`certificates`),
+    document.getElementById(`services`),
+    document.getElementById(`skills`),
+    document.getElementById(`projects`),
+    document.getElementById(`contact`),
+  ],
+}
+for (let i = 0; i < mobility.btns.length; i++) {
+  mobility.btns[i].addEventListener(`click`, () => {
+    window.scrollTo({
+      // top: mobility.componants[i].offsetTop - 50,
+      top: window.innerWidth > 992 ? mobility.componants[i].offsetTop - 50 :  mobility.componants[i].offsetTop,      
+      left: 0,
+      behavior: "smooth"
+    })
+  })
+}
 // nav
 
 // header

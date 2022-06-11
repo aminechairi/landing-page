@@ -14,7 +14,7 @@ let = mobility = {
     document.querySelectorAll(".nav-page .ctn ul")[0].children[3],
     document.querySelectorAll(".nav-page .ctn ul")[0].children[4],
     document.querySelectorAll(".nav-page .ctn ul")[0].children[5],
-    document.querySelectorAll(".nav-page .ctn ul")[0].children[6], 
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[6],
   ],
   componants: [
     document.getElementById(`home`),
@@ -47,7 +47,8 @@ let header_animation = {
     document.querySelectorAll(".nav-page .ctn ul")[0].children[3],
     document.querySelectorAll(".nav-page .ctn ul")[0].children[4],
     document.querySelectorAll(".nav-page .ctn ul")[0].children[5],
-    document.querySelectorAll(".nav-page .ctn ul")[0].children[6],    
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[6],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[7],
     document.querySelectorAll(".landing")[0],
     document.querySelectorAll(".landing .color .ctn")[0].children[0],
     document.querySelectorAll(".landing .color .ctn")[0].children[1],

@@ -29,13 +29,49 @@ let = mobility = {
 for (let i = 0; i < mobility.btns.length; i++) {
   mobility.btns[i].addEventListener(`click`, () => {
     window.scrollTo({
-      // top: mobility.componants[i].offsetTop - 50,
       top: window.innerWidth > 992 ? mobility.componants[i].offsetTop - 50 :  mobility.componants[i].offsetTop,      
       left: 0,
       behavior: "smooth"
     })
   })
 }
+
+(function versionBlack() {
+  let tage_style = document.getElementById(`tage-style`);
+  let link_length = tage_style.href.length;
+  let tage_style_initial = tage_style.href.slice(0 , link_length - 19);
+  let version_white = "css/aminechairi.css";
+  let version_black = "css/aminechairiversionblack.css";
+  let boolean = true;
+  let btn_version_black = document.querySelectorAll(`.btn-version-black`)[0];
+
+  if (localStorage.getItem(`version black`) === `white`) {
+    tage_style_initial = tage_style.href.slice(0 , link_length - 19);
+    tage_style.href = tage_style_initial += version_white;
+    boolean = true;
+    window.localStorage.setItem(`version black`, `white`)
+  } else if (localStorage.getItem(`version black`) === `black`) {
+    tage_style_initial = tage_style.href.slice(0 , link_length - 19);
+    tage_style.href = tage_style_initial += version_black;
+    boolean = false;
+    window.localStorage.setItem(`version black`, `black`);
+  }
+  btn_version_black.addEventListener(`click`, () => {
+    if (boolean === true) {
+      tage_style_initial = tage_style.href.slice(0 , link_length - 19);
+      tage_style.href = tage_style_initial += version_black;
+      boolean = false;
+      window.localStorage.setItem(`version black`, `black`);
+      // window.location.reload()
+    } else {
+      tage_style_initial = tage_style.href.slice(0 , link_length - 19);
+      tage_style.href = tage_style_initial += version_white;
+      boolean = true;
+      window.localStorage.setItem(`version black`, `white`);
+      // window.location.reload()
+    }
+  })
+}())
 // nav
 
 // header

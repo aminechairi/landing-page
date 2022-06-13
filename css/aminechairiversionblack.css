@@ -3,19 +3,12 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* :root {
+:root {
   --color-1: rgba(1, 174, 254, 0.829);
   --color-main: #1d1d1d;
   --colo-white: rgb(223, 223, 223);
   --shadow-boxs: rgb(114, 114, 114);
   --color-defference: rgb(49, 49, 49);
-} */
-:root {
-  --color-1: rgba(1, 174, 254, 0.829);
-  --color-main: #fff;
-  --colo-white: black;
-  --shadow-boxs: rgb(114, 114, 114);
-  --color-defference: rgb(239, 239, 239);
 }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -88,7 +81,7 @@ ul {
 .header-page {
   position: sticky;
   top: 0;
-  background-color: var(--color-main);
+  background-color: var(--color-defference);
 }
 .header-page .logo .ctn {
   display: flex;
@@ -128,7 +121,7 @@ ul {
 }
 .nav-page {
   z-index: 100;
-  background-color: var(--color-main);
+  background-color: var(--color-defference);
 }
 @media (min-width: 992px) {
   .nav-page {
@@ -189,17 +182,18 @@ ul {
   left: 0;
 }
 .nav-page .ctn > ul li .btn-version-black {
+  /* background-color: var(--color-1); */
   color: white;
 }
 .nav-page .ctn > ul li .btn-version-black:hover {
-  color: black;
-}
-.fa-toggle-on {
-  display: none;
+  color: white;
 }
 .fa-toggle-off {
+  display: none;
+}
+.fa-toggle-on {
+  color: white;
   font-size: 22px;
-  color: black;
 }
 @media (min-width: 992px) {
   .nav-page .ctn > ul li a {
@@ -222,7 +216,7 @@ ul {
 .landing .color {
   width: 100%;
   height: 100%;
-  background-color: rgb(0 0 0 / 61%);
+  background-color: rgba(0, 0, 0, 0.658);
 }
 .landing .color .ctn {
   display: flex;
@@ -232,19 +226,19 @@ ul {
   align-items: center;
 }
 .landing .color .ctn .text-1 {
-  color: var(--color-main);
+  color: var(--colo-white);
   font-size: 18px;
   text-align: center;
   margin-bottom: 10px;
 }
 .landing .color .ctn h1 {
-  color: var(--color-main);
+  color: var(--colo-white);
   font-size: 32px;
   text-align: center;
   margin-bottom: 20px;
 }
 .landing .color .ctn .text-2 {
-  color: var(--color-main);
+  color: var(--colo-white);
   font-size: 18px;
   width: fit-content;
   width: 90%;
@@ -266,7 +260,7 @@ ul {
   font-size: 18px;
   text-transform: uppercase;
   padding: 10px 24px;
-  background-color: var(--color-main);
+  background-color: var(--colo-white);
   border-radius: 15px;
   transition: all 0.3s;
 }
@@ -447,7 +441,6 @@ ul {
 .certificates .ctn .box {
   padding: 20px;
   border: 2px solid var(--colo-white);
-  background-color: var(--color-main);
   transition: all 0.3s;
 }
 .certificates .ctn .box:hover {
@@ -467,7 +460,6 @@ ul {
   font-weight: 600;
   margin-bottom: 20px;
   transition: all 0.3s;
-  color: var(--color-1);
 }
 .certificates .ctn .box:hover h1 {
   text-decoration: underline;
@@ -524,7 +516,6 @@ ul {
   margin-bottom: 20px;
   font-weight: 600;
   transition: all 0.3s;
-  color: var(--color-1);
 }
 .services .ctn .box:hover h1 {
   color: var(--color-1);
@@ -569,14 +560,13 @@ ul {
   text-transform: uppercase;
   margin-bottom: 10px;
   font-weight: 600;
-  color: var(--colo-white);
 }
 .skills .ctn .ab-skills .ab-meter .meter {
   width: 100%;
   height: 20px;
   margin-bottom: 16px;   
   border-radius: 15px;
-  background-color: var(--color-main);
+  background-color: var(--colo-white);
 }
 .skills .ctn .ab-skills .ab-meter .meter .value-meter {
   height: 100%;
@@ -650,14 +640,14 @@ ul {
 .project .ctn .box .des h1 {
   text-align: center;
   font-size: 32px;
-  color: var(--color-main);
+  color: var(--colo-white);
   margin-bottom: 10px;
   font-weight: 600;
 }
 .project .ctn .box .des p {
   text-align: center;
   font-size: 18px;
-  color: var(--color-main);
+  color: var(--colo-white);
   width: 70%;
   margin-bottom: 10px;
 }
@@ -813,7 +803,7 @@ ul {
 }
 .form-page .form .ctn form input[type="submit"] {
   background-color: var(--color-1);
-  color: var(--color-main);
+  color: var(--colo-white);
   border: none;
   border-radius: 15px;
   margin-bottom: 0px;
@@ -939,6 +929,6 @@ ul {
 }
 .scroll-top .ctn .i svg {
   font-size: 24px;
-  color: var(--color-main);
+  color: var(--colo-white);
 }
 /* scroll top */

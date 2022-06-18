@@ -6,6 +6,9 @@ let nav_display = {
 nav_display.btn_muni.addEventListener("click", () => {
   nav_display.muni.classList.toggle("display");
 })
+window.addEventListener(`resize`, () => {
+  nav_display.muni.classList.remove("display");
+})
 let = mobility = {
   btns: [
     document.querySelectorAll(".nav-page .ctn ul")[0].children[0],
@@ -62,36 +65,17 @@ for (let i = 0; i < mobility.btns.length; i++) {
       tage_style.href = tage_style_initial += version_black;
       boolean = false;
       window.localStorage.setItem(`version black`, `black`);
-      // window.location.reload()
     } else {
       tage_style_initial = tage_style.href.slice(0 , link_length - 19);
       tage_style.href = tage_style_initial += version_white;
       boolean = true;
       window.localStorage.setItem(`version black`, `white`);
-      // window.location.reload()
     }
   })
 }())
 // nav
 
-// header
-let header_animation = {
-  elements: [
-    document.querySelectorAll(".nav-page .ctn ul")[0].children[0],
-    document.querySelectorAll(".nav-page .ctn ul")[0].children[1],
-    document.querySelectorAll(".nav-page .ctn ul")[0].children[2],
-    document.querySelectorAll(".nav-page .ctn ul")[0].children[3],
-    document.querySelectorAll(".nav-page .ctn ul")[0].children[4],
-    document.querySelectorAll(".nav-page .ctn ul")[0].children[5],
-    document.querySelectorAll(".nav-page .ctn ul")[0].children[6],
-    document.querySelectorAll(".nav-page .ctn ul")[0].children[7],
-    document.querySelectorAll(".landing")[0],
-    document.querySelectorAll(".landing .color .ctn")[0].children[0],
-    document.querySelectorAll(".landing .color .ctn")[0].children[1],
-    document.querySelectorAll(".landing .color .ctn")[0].children[2],
-    document.querySelectorAll(".landing .color .ctn")[0].children[3],
-  ],
-}
+// functions
 function animationLoad(el) {
   let elements = el;
   let time = 0;
@@ -108,18 +92,6 @@ function animationLoad(el) {
         }, time += 160);
       }
   })
-}
-animationLoad(header_animation.elements);
-// header
-
-// titles about
-let titles_about = {
-  elements: [
-    document.querySelectorAll(".titles .ctn .border")[0].children[0],
-    document.querySelectorAll(".titles .ctn .border")[0].children[1],
-    document.querySelectorAll(".titles .ctn .names")[0].children[0],
-    document.querySelectorAll(".titles .ctn .names")[0].children[1],
-  ],
 }
 function animationScroll(el) {
   let elements = el;
@@ -139,6 +111,38 @@ function animationScroll(el) {
       }
     }
   })
+}
+// functions
+
+// header
+let header_animation = {
+  elements: [
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[0],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[1],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[2],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[3],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[4],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[5],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[6],
+    document.querySelectorAll(".nav-page .ctn ul")[0].children[7],
+    document.querySelectorAll(".landing")[0],
+    document.querySelectorAll(".landing .color .ctn")[0].children[0],
+    document.querySelectorAll(".landing .color .ctn")[0].children[1],
+    document.querySelectorAll(".landing .color .ctn")[0].children[2],
+    document.querySelectorAll(".landing .color .ctn")[0].children[3],
+  ],
+}
+animationLoad(header_animation.elements);
+// header
+
+// titles about
+let titles_about = {
+  elements: [
+    document.querySelectorAll(".titles .ctn .border")[0].children[0],
+    document.querySelectorAll(".titles .ctn .border")[0].children[1],
+    document.querySelectorAll(".titles .ctn .names")[0].children[0],
+    document.querySelectorAll(".titles .ctn .names")[0].children[1],
+  ],
 }
 animationScroll(titles_about.elements);
 // titles about
@@ -255,7 +259,7 @@ for (let i = 0; i < animation_skills.elements.length; i++) {
 }
 // skills
 
-// titles sproject
+// titles project
 let titles_project = {
   elements: [
     document.querySelectorAll(".titles .ctn .border")[4].children[0],

@@ -161,6 +161,7 @@ let animation_about = {
     document.querySelectorAll(".about-page .ctn .texts .reso")[0].children[2],
     document.querySelectorAll(".about-page .ctn .texts .reso")[0].children[3],
     document.querySelectorAll(".about-page .ctn .texts .reso")[0].children[4],
+    document.querySelectorAll(".about-page .ctn .texts .reso")[0].children[5],
   ],
 }
 animationScroll(animation_about.elements);

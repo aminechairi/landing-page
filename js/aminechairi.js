@@ -84,14 +84,12 @@ function animationLoad(el) {
     elements[i].style.transition = "all 0.3s";
     elements[i].style.transform = "translateY(60px)";
   }
-  window.addEventListener("load", () => {
-      for (let i = 0; i < elements.length; i++) {
-        setTimeout(() => {
-          elements[i].style.opacity = "1";
-          elements[i].style.transform = "translateY(0px)";
-        }, time += 160);
-      }
-  })
+  for (let i = 0; i < elements.length; i++) {
+    setTimeout(() => {
+      elements[i].style.opacity = "1";
+      elements[i].style.transform = "translateY(0px)";
+    }, time += 160);
+  }
 }
 function animationScroll(el) {
   let elements = el;
